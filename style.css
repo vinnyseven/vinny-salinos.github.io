@@ -8,6 +8,8 @@
 
 html{
     font-family: 'Poppins', sans-serif;
+    white-space:nowrap;
+    overflow: hidden;
 }
 
 ::selection{
@@ -874,6 +876,19 @@ button{
         grid-column: 13;
         font-size: 1.2rem;
     }
+
+    .nav-menu-link{
+        text-align: center;
+    }
+
+    .nav-menu-contact{
+        margin: 1vh 1vh;
+        text-align: center;
+    }
+
+    .nav-menu-contact-content{
+        text-align: center;
+    }
     /* NAV */
     /* FOOTER */
     .footer-project-links{
@@ -910,6 +925,10 @@ button{
         font-size: 10px;
     }
 
+    main{
+        grid-template-rows: 10vh 80vh 10vh ;
+    }
+
     .sidebar{
         display: none;
     }
@@ -929,14 +948,25 @@ button{
     /* NAV */   
     .nav-side {
         padding-top: 1px;
-        text-align: right;
+        text-align: center;
+        justify-content: center;
     }
    
     .nav-side a {
-        font-size: 2.5rem;
+        font-size: 5.5rem;
     }
     .nav-menu-link{
-        margin:0.5vh 1.2vh;
+        margin: 1vh 1vh;
+        text-align: center;
+    }
+
+    .nav-menu-contact{
+        margin: 1vh 1vh;
+        text-align: center;
+    }
+
+    .nav-menu-contact-content{
+        text-align: center;
     }
 
     /* FOOTER */
@@ -983,5 +1013,41 @@ button{
     /* ABOUT */
 
     /* PROJECT */
+}
+
+@media screen and (min-height: 480px)  and (orientation : landscape) {
+    .logo img{
+        width: 50%;
+    }
+    .nav-menu{
+        font-size: 0.8rem;
+    }
+    .sidebar{
+        font-size: 1rem;
+    }
+    .sidebar li{
+        padding-top: 0.8rem;
+    }
+    .project-text{
+        font-size: 1rem;
+    }
+    .project-text img{
+        height: 10%;
+    }
+    .echoroom-text{
+        font-size: 1.7rem;
+    }
+    .massimo-text{
+        font-size: 1.7rem;
+    }
+    .designmuseum-text{
+        font-size: 1.2rem;
+    }
+    .footer-project-links{
+        grid-column: 6/ span 4;
+    }
+    .footer-links, .footer button{
+        font-size: 1.5rem;
+    }
 }
 
