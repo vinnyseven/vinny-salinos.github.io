@@ -1153,7 +1153,7 @@ button{
     }
 }
 
-@media screen and (min-height: 310px)  and (orientation : landscape) {
+@media screen and (min-height: 310px)  and (max-width: 1000px) and (orientation : landscape) {
     .logo{
         grid-column: 1;
     }
