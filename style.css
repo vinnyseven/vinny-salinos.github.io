@@ -8,7 +8,11 @@
 
 html{
     font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
     /* overflow: hidden; */
+=======
+    overflow: hidden;
+>>>>>>> 5e3e3123bfca1be607c192f225d04ddac6e2c727
 }
 
 ::selection{
@@ -932,12 +936,17 @@ button{
         font-size: 10px;
     }
 
+<<<<<<< HEAD
     /* main{
         grid-template-rows: 10vh 80vh 10vh ;
     } */
 
     main {
         grid-template-rows: 10vh 83vh 7vh;
+=======
+    main{
+        grid-template-rows: 10vh 80vh 10vh ;
+>>>>>>> 5e3e3123bfca1be607c192f225d04ddac6e2c727
     }
 
     .sidebar{
@@ -1071,6 +1080,42 @@ button{
     }
     .footer-backprojects{
         grid-column: 10/14;
+    }
+}
+
+@media screen and (min-height: 480px)  and (orientation : landscape) {
+    .logo img{
+        width: 50%;
+    }
+    .nav-menu{
+        font-size: 0.8rem;
+    }
+    .sidebar{
+        font-size: 1rem;
+    }
+    .sidebar li{
+        padding-top: 0.8rem;
+    }
+    .project-text{
+        font-size: 1rem;
+    }
+    .project-text img{
+        height: 10%;
+    }
+    .echoroom-text{
+        font-size: 1.7rem;
+    }
+    .massimo-text{
+        font-size: 1.7rem;
+    }
+    .designmuseum-text{
+        font-size: 1.2rem;
+    }
+    .footer-project-links{
+        grid-column: 6/ span 4;
+    }
+    .footer-links, .footer button{
+        font-size: 1.5rem;
     }
 }
 
