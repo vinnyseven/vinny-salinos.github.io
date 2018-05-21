@@ -8,6 +8,7 @@
 
 html{
     font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
 }
 
 ::selection{
@@ -41,6 +42,10 @@ h4{
 
 a :visited{
     color: #2E3192;
+}
+
+p{
+    white-space:normal;
 }
 
 /* LOADER */
@@ -508,6 +513,7 @@ a :visited{
 
 .project-img-full{
     text-align: center;
+    align-content: center;
     height: 80vh;
     grid-row: auto;
     grid-column: 1 / 14;
@@ -632,7 +638,7 @@ a :visited{
     width: 30%;
 }
 
-#designmuseum-img-2{
+#designmuseum-img-3{
     height: 80vh;
 }
 
@@ -641,9 +647,9 @@ a :visited{
 }
 
 #designmuseum-img-4 img{
-    padding: 0;
+    /* padding: 0;
     margin: 0 auto;
-    width: 44%;
+    width: 44%; */
 }
 
 
@@ -874,6 +880,19 @@ button{
         grid-column: 13;
         font-size: 1.2rem;
     }
+
+    .nav-menu-link{
+        text-align: center;
+    }
+
+    .nav-menu-contact{
+        margin: 1vh 1vh;
+        text-align: center;
+    }
+
+    .nav-menu-contact-content{
+        text-align: center;
+    }
     /* NAV */
     /* FOOTER */
     .footer-project-links{
@@ -901,6 +920,9 @@ button{
     }
     /* ABOUT */
     /* PROJECTS */
+    .footer-backprojects{
+        grid-column: 10/14;
+    }
 }
 
 /* Screens MAX@480px */
@@ -908,6 +930,14 @@ button{
 @media screen and (max-width: 480px) {
     html{
         font-size: 10px;
+    }
+
+    /* main{
+        grid-template-rows: 10vh 80vh 10vh ;
+    } */
+
+    main {
+        grid-template-rows: 10vh 83vh 7vh;
     }
 
     .sidebar{
@@ -929,14 +959,25 @@ button{
     /* NAV */   
     .nav-side {
         padding-top: 1px;
-        text-align: right;
+        text-align: center;
+        justify-content: center;
     }
    
     .nav-side a {
-        font-size: 2.5rem;
+        font-size: 5.5rem;
     }
     .nav-menu-link{
-        margin:0.5vh 1.2vh;
+        margin: 1vh 1vh;
+        text-align: center;
+    }
+
+    .nav-menu-contact{
+        margin: 1vh 1vh;
+        text-align: center;
+    }
+
+    .nav-menu-contact-content{
+        text-align: center;
     }
 
     /* FOOTER */
@@ -983,5 +1024,89 @@ button{
     /* ABOUT */
 
     /* PROJECT */
+    .page-title{
+        grid-column: 2;
+    }
+    .info-text{
+        grid-column: 4/11; 
+    }
+    .project-img-half-left, .project-img-half-right{
+        text-align: center;
+        height: 15vh;
+        grid-column: 1 / 14;
+        overflow: hidden;
+        display: grid;
+        /* background-color: #2E3192; */
+    }
+    .project-img-half-left p, .project-img-half-right p{ 
+        text-align: center;   
+    }
+
+    .project-img-full{
+        height: 20vh;
+    }
+
+    #designmuseum-img-1 img {
+        width: 80%;
+    }
+    #designmuseum-img-2 {
+        height: 20vh;
+    }
+    #designmuseum-img-3{
+        height: 40vh;
+    }
+    #designmuseum-img-3 img{
+        height: 100%;
+        width: auto;
+    }
+    #designmuseum-img-5{
+        height: 42vh;
+    }
+    .projects-more{
+        align-self: center;
+        font-size: 1rem;
+    }
+    .project-footer-arrow{
+        font-size: 2.25rem;
+    }
+    .footer-backprojects{
+        grid-column: 10/14;
+    }
+}
+
+@media screen and (min-height: 480px)  and (orientation : landscape) {
+    .logo img{
+        width: 50%;
+    }
+    .nav-menu{
+        font-size: 0.8rem;
+    }
+    .sidebar{
+        font-size: 1rem;
+    }
+    .sidebar li{
+        padding-top: 0.8rem;
+    }
+    .project-text{
+        font-size: 1rem;
+    }
+    .project-text img{
+        height: 10%;
+    }
+    .echoroom-text{
+        font-size: 1.7rem;
+    }
+    .massimo-text{
+        font-size: 1.7rem;
+    }
+    .designmuseum-text{
+        font-size: 1.2rem;
+    }
+    .footer-project-links{
+        grid-column: 6/ span 4;
+    }
+    .footer-links, .footer button{
+        font-size: 1.5rem;
+    }
 }
 
