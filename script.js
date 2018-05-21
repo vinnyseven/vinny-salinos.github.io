@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded',function(event){
    function openNav() {
     var screenWidth = screen.width;
        if (screenWidth > breakWidth){
-            navWidth = '40vw';
+            navWidth = '45vw';
        } else {
             navWidth = '100vw';
        };
@@ -80,3 +80,18 @@ function closeNav() {
         $(event.currentTarget).addClass('active-link');
         $(event.currentTarget).siblings().removeClass('active-link');
     });
+
+    //MOBILE
+
+    $(function(){
+        // Bind the swipeleftHandler callback function to the swipe event on div.box
+        $( ".project" ).on( "swipeleft", swipeleftHandler );
+       
+        // Callback function references the event target and adds the 'swipeleft' class to it
+        function swipeleftHandler( event ){
+            alert('hello');
+        //   $( event.target ).addClass( "swipeleft" );
+        }
+      });
+
+    //   document.getElementById("active-project").nextSibling.innerHTML
