@@ -11,9 +11,12 @@ var instance = new TypeIt('.type-project-title', {
 });
 var navWidth = '0';
 var breakWidth = 900;
-$(document).ready(()=>{
-    
-});
+var loader = document.getElementById("loader");
+    window.addEventListener("load", function(){
+        loader.style.height = "100px";
+        loader.style.width = "100px";
+        loader.style.visibility = "hidden";
+    });
 document.addEventListener('DOMContentLoaded',function(event){
     $(this).find('.ti-cursor').addClass('is-hidden');
 });

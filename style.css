@@ -3,7 +3,6 @@
     margin: 0;
     padding:0;
 }
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
 
 html{
@@ -26,7 +25,9 @@ main{
     grid-template-rows: 10vh 80vh 10vh ;
     grid-template-areas: "head" "container" "footer";
     transition: margin-left .5s;  
-    overflow-wrap: normal;                 
+    overflow-wrap: normal;
+    min-height: 0;  /* NEW */
+    min-width: 0;                  
 }
 
 h1{
@@ -75,6 +76,7 @@ p{
     height: 100%;
     display: grid;
     grid-template-columns:  repeat(14, 1fr);
+    /* grid-template-columns:  1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr; */
 }
 
 .logo{
@@ -94,11 +96,13 @@ p{
 
 .nav-menu{
     grid-column: 14;
+    display: block;
     align-self: center;
     margin: 0 auto;
 }
 
 .nav-menu-box{
+    display: block;
     color: #2E3192;
     padding: 8px;
     border: 3px solid #2E3192;
@@ -188,33 +192,38 @@ p{
 /* MAIN CONTAINENR WITH PROJECT THINGS */
 .container{
     grid-area: container;
+    display: block;
 }
 
 /* HOME PAGE */
 
 .project, .about{
     height: 100%;
-    display: grid;
+    display: inline-grid;
     grid-template-columns: repeat(14, 1fr);
     grid-template-rows: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* background-color: #FFDB00; */
 }
 
 .project{
   text-align: center;
+  align-items: stretch
 }
 
 .project-text{
     grid-column: 13/14;
     grid-row: 1;
     text-align: center;
+    align-self: center;
     height: 100%;
     padding: 0;
     margin: 0 auto;
-    writing-mode: vertical-rl;
     font-size: 1.7rem;
     /* overflow: hidden; */
+    z-index: 99;
 }
+
 
 .project-text img{
     transform: rotate(90deg);
@@ -223,9 +232,15 @@ p{
     margin-left: 10px;
 }
 
-.project-text > div, h1{
+.project-text > h1{
     margin: 0 auto;
     display: inline-block;
+    text-align: center;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
 }
 
 .sidebar{
@@ -259,8 +274,8 @@ p{
 }
 
 .project-img-container{
-    display: grid;
-    grid-template: 90% 10% / repeat(3,1fr);
+    display: inline-grid;
+    grid-template: 60vh 20vh / repeat(3,1fr);
     opacity: 1;
 }
 
@@ -342,15 +357,18 @@ p{
 }
 
 .project-btn{
-    align-self: end;
+    align-self: center;
+    margin-right: 3rem;
     grid-column: 3;
     grid-row: 2;
+    
 }
 
 .project-btn-content{
     margin: 1.5rem 2rem;
     font-size: 1.8rem;
     opacity: 1;
+    width: 100%;
 }
 
 .project-btn-content:hover{
@@ -372,7 +390,7 @@ p{
 
 .project-btn-text{
     pointer-events: none;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
     font-size: 1.8rem;
     font-weight: 600;
     text-transform: lowercase;
@@ -423,17 +441,20 @@ p{
 }
 
 .page-title{
-    height: 100%;
+    grid-column: 2;
+    display: block;
+}
+.page-title h1{
     padding: 0;
     margin: 0 auto;
     text-align: center;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 2.6rem;
+    font-size: 7rem;
 }
-
 .about-img{
-    grid-column: 3/7;
+    width:45vh;
+    grid-column: 3/8;
     text-align: center;    
 }
 
@@ -463,7 +484,7 @@ p{
 .projectcontent{
     grid-column: 3/14;
     height: 100%;
-    display: grid;
+    display: inline-grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows:  repeat(10, 1fr);
     overflow: auto;
@@ -472,24 +493,29 @@ p{
 
 .project-info{
     grid-column: 1/14;
+    grid-row: 1;
     height: 80vh;
-    display: grid;
+    display: inline-grid;
     grid-template-columns: repeat(10, 1fr);
-    
+}
+.look-down{
+    grid-column: 3;
+    align-self: center;
 }
 
 .have-a-look{
-    grid-row:1;
-    grid-column: 2;
-    height: 100%;
     padding: 0;
     margin: 0 auto;
+    display: inline-block;
     text-align: center;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    -moz-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
 }
 
 .info-text{
-    grid-row:1;
     align-self: center;
     grid-column: 6/11;   
     text-align: right;
@@ -597,6 +623,7 @@ p{
 }
 
 .project-footer h1{
+    display: inline-block;
     margin: 0 4vw;
 }              
 
@@ -744,7 +771,6 @@ p{
     font-size: 1.595rem;
     text-align: left;
 }
-
 #design-museum{
     font-size: 2rem;
 }
@@ -827,7 +853,6 @@ p{
 button{
     outline: 0 none;
 }
-
 @media screen and (max-width: 991px){
     /* HEADER */
     .logo{
@@ -1214,4 +1239,3 @@ button{
         font-size: 1.2rem;
     }
 }
-
