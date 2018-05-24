@@ -84,7 +84,6 @@ p{
     height: 100%;
     display: grid;
     grid-template-columns:  repeat(14, 1fr);
-    /* grid-template-columns:  1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr; */
 }
 
 .logo{
@@ -211,7 +210,7 @@ p{
     display: inline-grid;
     grid-template-columns: repeat(14, 1fr);
     grid-template-rows: 100%;
-    /* overflow: hidden; */
+    overflow: auto;
     /* background-color: #FFDB00; */
 }
 
@@ -993,15 +992,9 @@ button{
     html{
         font-size: 10px;
     }
-
-    /* main{
-        grid-template-rows: 10vh 80vh 10vh ;
-    } */
-
     main {
         grid-template-rows: 10vh 83vh 7vh;
     }
-
     .sidebar{
         display: none;
     }
@@ -1061,7 +1054,6 @@ button{
         overflow-wrap: normal;
         overflow: hidden;
     }
-
     .project-text img{
         height: 7%;
     }
@@ -1071,7 +1063,6 @@ button{
     .designmuseum-text{
         font-size: 3rem;
     }
-
     .massimo-text{
         font-size: 3rem;
     }
@@ -1122,19 +1113,22 @@ button{
     .page-title{
         grid-column: 2;
     }
-    .project-content{
-        overflow: scroll; /* has to be scroll, not auto */
-        -webkit-overflow-scrolling: touch;
+    .projectcontent{
+        max-height:100vh;
+        /* background-color: #FFDB00; */
+        overflow-y: scroll;
+        white-space: nowrap;
     }
     .info-text{
         grid-column: 4/11; 
+    
     }
     .project-img-half-left, .project-img-half-right{
         text-align: center;
         height: 15vh;
         grid-column: 1 / 14;
         overflow: hidden;
-        display: grid;
+        display: inline-grid;
         /* background-color: #2E3192; */
     }
     .project-img-half-left p, .project-img-half-right p{ 
