@@ -19,6 +19,7 @@ var loader = document.getElementById("loader");
     });
 document.addEventListener('DOMContentLoaded',function(event){
     $(this).find('.ti-cursor').addClass('is-hidden');
+
 });
 
  /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
@@ -74,14 +75,14 @@ function closeNav() {
                     currentTitle = designMuseum;
                 };
         }   
-        
+
         $(target).siblings().removeClass('active-project');
         $(target).addClass("active-project"); 
         $(target).find('.ti-cursor').addClass('is-hidden');
         $(target).find('.project-img-container').addClass("img-animation"); 
         $(target).find('.project-btn').addClass('project-btn-animation');
-        $(event.currentTarget).addClass('active-link');
-        $(event.currentTarget).siblings().removeClass('active-link');
+        $(event.currentTarget).addClass('active-link noTransition');
+        $(event.currentTarget).siblings().removeClass('active-link noTransition');
     });
 
     //MOBILE
