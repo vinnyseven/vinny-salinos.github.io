@@ -210,7 +210,7 @@ p{
     display: inline-grid;
     grid-template-columns: repeat(14, 1fr);
     grid-template-rows: 100%;
-    overflow: auto;
+    overflow: hidden;
     /* background-color: #FFDB00; */
 }
 
@@ -1114,7 +1114,7 @@ button{
         grid-column: 2;
     }
     .projectcontent{
-        max-height:100vh;
+        max-height:100vh ;
         /* background-color: #FFDB00; */
         overflow-y: scroll;
         white-space: nowrap;
