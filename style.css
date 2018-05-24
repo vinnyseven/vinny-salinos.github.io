@@ -615,7 +615,7 @@ p{
 
 .project-footer{
     text-align: center;
-    display: grid;
+    /* display: grid; */
     align-self: center;
     height: 20vh;
     grid-row: auto;
@@ -656,7 +656,9 @@ p{
 }
 
 /* ECHOROOM */
-
+#echoroom-text{
+    font-size: 4.5rem;
+}
 #info-echoroom{
     height: 50vh;
 }
@@ -799,11 +801,10 @@ p{
 }
 
 #projects-massimo{
-    font-size: 2.6rem;
+    font-size: 2.4rem;
 }
-
 #projects-designmuseum{
-    font-size: 3.759rem;
+    font-size: 3rem;
 }
 
 #who{
