@@ -447,7 +447,7 @@ p{
 
 .page-title{
     grid-column: 2;
-    display: block;
+    display: inline-grid;
 }
 .page-title h1{
     padding: 0;
@@ -488,31 +488,32 @@ p{
 /* INDIVIDUAL PROJECT CONTAINER */
 .projectcontent{
     grid-column: 3/14;
-    height: 100%;
+    height: 98vh;
     display: inline-grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows:  repeat(10, 1fr);
+    /* grid-template-rows: repeat(auto-fit, minmax(60ch, 1fr)); */
     grid-gap: 1vh;
     overflow: scroll; /* has to be scroll, not auto */
         -webkit-overflow-scrolling: touch;
 }
-
 .project-info{
     grid-column: 1/14;
     grid-row: 1;
-    height: 80vh;
+    height: 90vh;
     display: inline-grid;
     grid-template-columns: repeat(10, 1fr);
 }
 .look-down{
-    grid-column: 3;
+    grid-column: 2;
+    display: inline-grid;
     align-self: center;
 }
 
 .have-a-look{
     padding: 0;
     margin: 0;
-    display: inline-block;
+    /* display: inline-grid; */
     text-align: center;
     -ms-writing-mode: tb-rl;
     -webkit-writing-mode: vertical-rl;
@@ -615,7 +616,7 @@ p{
 
 .project-footer{
     text-align: center;
-    /* display: grid; */
+    display: grid;
     align-self: center;
     height: 20vh;
     grid-row: auto;
@@ -705,13 +706,15 @@ p{
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     color: #333333;
+    background-color: white;
+    z-index: 9;
 }
 
 .footer button{
     display: inline-block;
     border: none;
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1em;
     background-color: white;
     -webkit-transition: color 300ms ease;
             transition: color 300ms ease;
@@ -759,6 +762,9 @@ p{
     color: #FFDB00;
 }
 
+.sidebar-footer{
+    display: none;
+}
 
 /* OTHER */
 
@@ -999,6 +1005,29 @@ button{
     .sidebar{
         display: none;
     }
+    .sidebar-footer{
+        grid-area: footer;
+        grid-column: 2 / 7;
+        grid-row: 1;
+        display: inline-grid;
+        align-self: center;
+    }
+    .sidebar-footer ul{
+        padding: 0 auto;
+        margin: 0 auto;
+        white-space:nowrap;
+    }
+    .sidebar-footer  li{
+        text-align: left;
+        font-size: 2rem;
+        margin: 0 2vw;
+        display: inline-block;
+        padding: 0;
+        
+    }
+    .sidebar-footer a:visited{
+        color: #2E3192;
+    }
     /* HEADER */
     .logo{
         grid-column: 2;
@@ -1034,10 +1063,10 @@ button{
     /* FOOTER */
     .footer-project-links{
         grid-column: 4/ span 7;
-        font-size:1.2rem;
+        font-size:1.2em;
     }
     .footer-links > button{
-        font-size:3rem;
+        font-size:1em;
     }
     /* HOME PAGE */
     .project-img-container {
@@ -1070,12 +1099,18 @@ button{
     /* ABOUT */
     .about{
         grid-template-rows: repeat(2, 1fr);
+        height: 98vh;
         overflow: hidden;
+    }
+    #aboutcontainer{
+        grid-template-rows: 45vh 40vh;
+        overflow: scroll;
     }
     .about-text {
         grid-row: 2;
         grid-column: 3 /14;
-        overflow-y: scroll; /* has to be scroll, not auto */
+        /* background-color: red; */
+        overflow: scroll; /* has to be scroll, not auto */
         -webkit-overflow-scrolling: touch;
     } 
     .about-text h4{
@@ -1083,13 +1118,12 @@ button{
     }
     .about-img{
         grid-row: 1;
-        grid-column: 3/14;
+        grid-column: 2/14;
         align-self: start;
-        background-color: #FFDB00;
         overflow: hidden;
         object-fit: cover;
         width: 100%;
-        height: 35vh;
+        height: 65vh;
         max-height: 100%;
     }
     .about-img img{
@@ -1101,28 +1135,32 @@ button{
         margin-bottom: 1.5rem;
         margin-top: 0;
     }
-    #title-pg-about{
+    #title-pg-about h1{
         text-align: right;
         grid-row: 2;
-        font-size: 2.5rem;
+        font-size: 6rem;
         white-space:nowrap;
     }
     #loveachallenge{
         grid-column: 4/14;
     }
     /* PROJECT */
+    #projectcontainer{
+        grid-template-rows: 10vh 68vh 10vh;
+    }
     .page-title{
         grid-column: 2;
+        grid-row: 2;
     }
     .projectcontent{
         max-height:100vh ;
+        grid-row: 1/ 4;
         /* background-color: #FFDB00; */
         overflow-y: scroll;
         white-space: nowrap;
     }
     .info-text{
         grid-column: 4/11; 
-    
     }
     .project-img-half-left, .project-img-half-right{
         text-align: center;
@@ -1139,7 +1177,6 @@ button{
     .project-img-full{
         height: 20vh;
     }
-
     #designmuseum-img-1 img {
         width: 80%;
     }
@@ -1160,11 +1197,12 @@ button{
         align-self: center;
         font-size: 1rem;
     }
-    .project-footer-arrow{
-        font-size: 2.25rem;
+    .project-footer-arrow > i{
+        font-size: 2.25em;
     }
     .footer-backprojects{
         grid-column: 1/14;
+        grid-row: 1;
     }
     .footer-backprojects i, .footer-backprojects h5 {
         font-size: 1.5rem;
