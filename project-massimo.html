@@ -1,64 +1,109 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="img/vs-logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">    
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="scripts/typeit.min.js"></script>
+    <script src="scripts/jquery.visible.min.js"></script>
 </head>
+
 <body>
     <div id="loader">
         <img src="img/vs-loader.gif">
     </div>
     <main class="img-animation">
-            <div class="navbar">
-                <div class="logo">
-                  <!-- <img class="nav-logo" src="img/Untitled-1.gif"> -->
-                  <a href="index.html"><img class="nav-logo" src="img/vs-logo.png"></a>
-                </div>
-                <div class="nav-menu">
-                    <span onclick="openNav()">
-                        <i class="fas fa-bars nav-menu-box"></i>
-                    </span>
-                    <div class=nav-side id=nav-side-menu>
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-                            <i class="fas fa-times"></i>
+        <div class="navbar">
+            <div class="logo">
+                <!-- <img class="nav-logo" src="img/Untitled-1.gif"> -->
+                <a href="index.html">
+                    <img class="nav-logo" src="img/vs-logo.png">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <span onclick="openNav()">
+                    <i class="fas fa-bars nav-menu-box"></i>
+                </span>
+                <div class=nav-side id=nav-side-menu>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+                        <i class="fas fa-times"></i>
+                    </a>
+                    <div class="nav-menu-link-content">
+                        <a href="index.html" class="nav-menu-link">
+                            <span class="bracket">[ </span>Home
+                            <span class="bracket"> ]</span>
                         </a>
-                        <div class="nav-menu-link-content">
-                            <a href="index.html" class="nav-menu-link"><span class="bracket">[ </span>Home<span class="bracket"> ]</span></a>
-                            <a href="about.html" class="nav-menu-link"><span class="bracket">[ </span>About<span class="bracket"> ]</span></a>
-                            <a href="#" class="nav-menu-link"><span class="bracket">[ </span>Project<span class="bracket"> ]</span></a>
-                            <a href="#" class="nav-menu-link"><span class="bracket">[ </span>Contact<span class="bracket"> ]</span></a>
-                            <a href="#" class="nav-menu-link" id="strikethrough">Side Tings</a>
+                        <a href="about.html" class="nav-menu-link">
+                            <span class="bracket">[ </span>About
+                            <span class="bracket"> ]</span>
+                        </a>
+                        <a href="#" class="nav-menu-link">
+                            <span class="bracket">[ </span>Project
+                            <span class="bracket"> ]</span>
+                        </a>
+                        <a href="#" class="nav-menu-link">
+                            <span class="bracket">[ </span>Contact
+                            <span class="bracket"> ]</span>
+                        </a>
+                        <a href="#" class="nav-menu-link" id="strikethrough">Side Tings</a>
+                    </div>
+                    <div class="nav-menu-contact">
+                        <div class="nav-menu-contact-content">
+                            <h6>Insta</h6>
+                            <p>@vinnysalinos</p>
                         </div>
-                        <div class="nav-menu-contact">
-                            <div class="nav-menu-contact-content">
-                                <h6>Insta</h6>
-                                <p>@vinnysalinos</p>
-                            </div>
-                            <div class="nav-menu-contact-content">
-                                <h6>electronic mail</h6>
-                                <p>vincent.salinos@gmail.com</p>
-                            </div>
+                        <div class="nav-menu-contact-content">
+                            <h6>electronic mail</h6>
+                            <p>vincent.salinos@gmail.com</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="about" id="projectcontainer">
-                    <div class="sidebar">
-                        <ul>
-                            <li><a href="mailto:vincent.salinos@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
-                            <li><a href="https://www.instagram.com/vincentsalinos/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://www.behance.net/vinnysalinos" target="_blank"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/vincentsalinos/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                        </ul>
+        </div>
+        <div class="container">
+            <div class="about" id="projectcontainer">
+                <div class="sidebar">
+                    <div class="page-title-side">
+                        <h1 id="projectstitle">
+                            <span class="bracket-color">[</span>
+                            <span class="type-project-title">
+                                <span class="project-title" id="project-title-massimo">Massimo's Intangibles</span>
+                                <span class="vs-dot">.</span>
+                            </span>
+                            <span class="bracket-color">]</span>
+                        </h1>
                     </div>
-                    <div class="page-title">
+                    <ul class="side-icons">
+                        <li>
+                            <a href="mailto:vincent.salinos@gmail.com" target="_blank">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/vincentsalinos/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net/vinnysalinos" target="_blank">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/vincentsalinos/" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="page-title">
                         <h1>
                             <span class="bracket-color">[</span>
                             <span class="type-project-title" id="projects-massimo">
@@ -66,63 +111,111 @@
                             </span>
                             <span class="bracket-color">]</span>
                         </h1>
-                    </div>
+                    </div> -->
 
-                    <div class="projectcontent">
-                        <div class="project-info">
-                            <div class="look-down">
-                                <h1 class="have-a-look down">have a look <i class="fas fa-arrow-down"></i></h1>
-                            </div>
-                            <div class="info-text">
-                                <h1>Project Focus </h1>
-                                <h4 class="info-categories">web design</h4>
-                                <p>The brief for this project was to develop a single page website; the subject was a designer who we find interesting, and the aim of the site was to focus on an intriguing perspective that designer had. Thus, this sites’ objective was to explore Massimo Vignelli’s “intangible principles”; a set of ideals that every designer should abide; in action in his NYC Subway redesign.</p>
-                                
-                            </div>
-                        </div>
-                        <div class="project-img-full" id="massimo-img-1">
+                <div class="projectcontent">
+                    <div class="project-hero">
+                        <h1 id="projectstitlemobile">
+                            <span class="bracket-color">[</span>
+                            <span class="type-project-title">
+                                <span class="project-title" id="project-title-massimo">Massimo's Intangibles</span>
+                                <span class="vs-dot">.</span>
+                            </span>
+                            <span class="bracket-color">]</span>
+                        </h1>
+                        <div class="project-img-full project-img-hero" id="massimo-img-1">
                             <img src="img/projects/massimo/Massimo-MockupScreens-v03" alt="">
                         </div>
-                        <div class="project-img-full" id="massimo-img-2">
-                            <img src="img/projects/massimo/Massimo-Screens-v01.png" alt="">
+                    </div>
+                    <div class="project-info">
+
+                        <div class="look-down">
+                            <h1 class="have-a-look down">have a look
+                                <i class="fas fa-arrow-down"></i>
+                            </h1>
                         </div>
-                        <div class="project-img-full" id="massimo-img-3">
-                            <video id="massimo-video" controls>
-                                <source src="img/projects/massimo/Massimo_seq.mp4">
-                            </video>
+                        <div class="info-text">
+                            <h1>Project Focus </h1>
+                            <p>The brief for this project was to develop a single page website; the subject was a designer who
+                                we find interesting, and the aim of the site was to focus on an intriguing perspective that
+                                designer had. Thus, this sites’ objective was to explore Massimo Vignelli’s “intangible principles”;
+                                a set of ideals that every designer should abide; in action in his NYC Subway redesign.</p>
+                            <h4 class="info-categories">web design(HTML5 + CSS3 + JS)</h4>
                         </div>
-                        <div class="project-footer">
-                            <div class="projects-more">
-                                <a href="project-echoroom.html" class="project-footer-arrow"><i class="fas fa-arrow-left"></i></a>
-                                <h1>More Projects?</h1>
-                                <a href="project-design-museum.html" class="project-footer-arrow"><i class="fas fa-arrow-right"></i></a>
-                            </div>
+                    </div>
+                    <div class="project-img-full massimo-img" id="massimo-img-2">
+                        <img src="img/projects/massimo/Massimo-Screens-01.png" alt="">
+                    </div>
+                    <div class="project-img-full massimo-img" id="massimo-img-3">
+                        <img src="img/projects/massimo/Massimo-Screens-02.png" alt="">
+                    </div>
+                    <div class="project-img-full massimo-img" id="massimo-img-4">
+                        <img src="img/projects/massimo/Massimo-Screens-03.png" alt="">
+                    </div>
+                    <div class="project-img-full massimo-img" id="massimo-img-5">
+                        <img src="img/projects/massimo/Massimo-Screens-04.png" alt="">
+                    </div>
+                    <div class="project-img-full massimo-img" id="massimo-img-6">
+                        <video id="massimo-video" controls loop muted>
+                            <source src="img/projects/massimo/Massimo_seq.mp4">
+                        </video>
+                    </div>
+                    <div class="project-footer">
+                        <div class="projects-more">
+                            <a href="project-echoroom.html" class="project-footer-arrow">
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                            <h1>More Projects?</h1>
+                            <a href="project-design-museum.html" class="project-footer-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div> 
-            <div class="footer">
-                    <div class="sidebar-footer">
-                            <ul>
-                                <li><a href="mailto:vincent.salinos@gmail.com" target="_blank"><i class="far fa-envelope"></i></a></li>
-                                <li><a href="https://www.instagram.com/vincentsalinos/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://www.behance.net/vinnysalinos" target="_blank"><i class="fab fa-behance"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/vincentsalinos/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                <div class="footer-backprojects">
-                    <a href="index.html"><i class="fas fa-arrow-left project-footer-arrow"></i><h5>Back to Projects</h5></a>
-                </div>
-            </div>      
+            </div>
+        </div>
+        <div class="footer">
+            <div class="sidebar-footer">
+                <ul>
+                    <li>
+                        <a href="mailto:vincent.salinos@gmail.com" target="_blank">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/vincentsalinos/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.behance.net/vinnysalinos" target="_blank">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/vincentsalinos/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-backprojects">
+                <a href="index.html">
+                    <i class="fas fa-arrow-left project-footer-arrow"></i>
+                    <h5>Back to Projects</h5>
+                </a>
+            </div>
+        </div>
     </main>
 </body>
 <script type="text/javascript">
     var loader = document.getElementById("loader");
-    window.addEventListener("load", function(){
+    window.addEventListener("load", function () {
         loader.style.height = "1000px";
         loader.style.width = "1000px";
         loader.style.visibility = "hidden";
     });
 </script>
 <script src="script.js"></script>
+
 </html>
