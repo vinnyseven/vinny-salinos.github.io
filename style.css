@@ -678,7 +678,10 @@ p{
     background-color: #FFDB00;
     color: white;
 }
-
+.black-text-section{
+    background-color: #333333;
+    color: white;
+}
 .project-footer{
     text-align: center;
     display: grid;
@@ -858,7 +861,57 @@ p{
     -moz-box-shadow: 2px 2px 35px 1px rgba(181,181,181,0.25);
     box-shadow: 2px 2px 35px 1px rgba(181,181,181,0.25);
 }
-
+#project-echoroom > div{
+    margin: 5vh 0;
+}
+/* #project-echoroom > div > img{
+    width: 80vw;
+    height: auto;
+    -webkit-box-shadow: 2px 2px 35px 1px rgba(181,181,181,0.25);
+    -moz-box-shadow: 2px 2px 35px 1px rgba(181,181,181,0.25);
+    box-shadow: 2px 2px 35px 1px rgba(181,181,181,0.25);
+} */
+#echoroom-poster-1, #echoroom-poster-2{
+    height: 70vh;
+    width: auto;
+    -webkit-box-shadow: 2px 2px 35px 1px rgba(181,181,181,0.55);
+    -moz-box-shadow: 2px 2px 35px 1px rgba(181,181,181,0.55);
+    box-shadow: 2px 2px 35px 1px rgba(181,181,181,0.55);
+}
+#echoroom-poster-1 img, #echoroom-poster-2 img{
+    
+}
+#echoroom-poster-1{
+    grid-column: 1 / 6;
+}
+#echoroom-poster-2{
+    grid-column: 7 / 12;
+}
+#echoroom-img-4{
+    grid-column: 1 / 6;
+}
+#echoroom-img-5{
+    grid-column: 7 / 12;
+}
+#echoroom-img-6{
+    grid-column: 1 / 6;
+}
+#echoroom-img-7{
+    grid-column: 7 / 12;
+}
+#echoroom-img-13{
+    grid-column: 1 / 7;
+    justify-content: center;
+}
+#echoroom-img-14{
+    grid-column: 7 / 12;
+    justify-content: left;
+}
+#echoroom-img-13, #echoroom-img-14{
+    height: 70vh;
+    width: auto;
+    
+}
 /* FOOTER SECTION */
 .footer{
     grid-area: footer;
